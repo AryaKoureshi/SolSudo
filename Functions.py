@@ -25,7 +25,7 @@ def load_data(nb_train=40000, nb_test=10000, full=False):
     """
     # if full is true, load the whole dataset
     if full:
-        sudokus = pd.read_csv('C:/Users/Arya/Desktop/sudoku.csv').values
+        sudokus = pd.read_csv('Enter Location!/sudoku.csv').values
         # Transpose of sudokus matrix to quizzes and solutions
         quizzes, solutions = sudokus.T
         # Create sudoku shape from quizzes
@@ -37,7 +37,7 @@ def load_data(nb_train=40000, nb_test=10000, full=False):
         return (Xs[:nb_train], Ys[:nb_train])
     else:
         sudokus = next(
-            pd.read_csv('C:/Users/Arya/Desktop/sudoku.csv', chunksize=(nb_train + nb_test))
+            pd.read_csv('Enter Location!/sudoku.csv', chunksize=(nb_train + nb_test))
         ).values
         # Transpose of sudokus matrix to quizzes and solutions
         quizzes, solutions = sudokus.T
