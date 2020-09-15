@@ -82,7 +82,7 @@ for nb_epochs, nb_delete in zip(
         callbacks=[early_stop]
     )
 print("Saving trained model..")
-solver.save('C:/Users/Arya/Desktop/solver.h5')
+solver.save('Enter Location!/solver.h5')
 print("Saved.")
 #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 # Predicting
@@ -90,11 +90,11 @@ quizzes = Xtest.argmax(3)  # quizzes in the (?, 9, 9) shape. From the test set
 true_grids = Ytest.argmax(3) + 1  # true solutions dont forget to add 1 
 smart_guesses = batch_smart_solver(quizzes, solver)  # make smart guesses !
 print("Saving trained model..")
-solver.save('C:/Users/Arya/Desktop/solver.h5')
+solver.save('Enter Location!/solver.h5')
 print("Saved.")
 #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 # Plot model
 print("Ploting Model...")
-plot_model(solver, to_file='C:/Users/Arya/Desktop/solver.png', show_shapes=True, expand_nested=True, dpi=300)
+plot_model(solver, to_file='Enter Location!/solver.png', show_shapes=True, expand_nested=True, dpi=300)
 print("Plotted Successful.")
 print("All Process Passed Successful!")
